@@ -1,4 +1,4 @@
-//: Playground - noun: a place where people can play
+// Closure Test
 
 import UIKit
 
