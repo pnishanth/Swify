@@ -13,6 +13,7 @@
 let image1 = UIImage(named: "Image1.png")
 let image2 = UIImage(named: "Image2.png")
 
+compareImages(image1: image1, image2: image2)
 
 extension UIImage {
     
@@ -43,7 +44,7 @@ extension UIImage {
 
 
 
-compareImages(image1: image1, image2: image2)
+
 
 
 extension CGImage {
