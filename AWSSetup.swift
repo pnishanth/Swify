@@ -37,5 +37,13 @@ class AWSSetupController: UIViewController {
             
             return nil
         }
+        
+        //AWSS3 Transfer Utility - files can be downloaded and uploaded using this method
+        //Code to follow.
+        
+        
+        
+        
+        
     }
   }
