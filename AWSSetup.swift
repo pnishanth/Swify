@@ -11,6 +11,8 @@ import AWSCognito
 import AWSS3
 
 class AWSSetupController: UIViewController {
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -42,8 +44,31 @@ class AWSSetupController: UIViewController {
         //Code to follow.
         
         
-        
+    
         
         
     }
+    
+    func getObjectInS3(){
+        
+        let credentialsProvider = AWSStaticCredentialsProvider(accessKey: "ACCESS KEY", secretKey: "SECRET KEY")
+        let configuration = AWSServiceConfiguration(region: .USEast1, credentialsProvider: credentialsProvider)
+        AWSS3.registerS3WithConfiguration(configuration, forKey: "defaultKey")
+        let s3 = AWSS3.S3ForKey("defaultKey")
+        
+        let listRequest: AWSS3ListObjectsRequest = AWSS3ListObjectsRequest()
+        listRequest.bucket = "BUCKET_NAME"
+        
+        s3.listObjects(listRequest).continueWithBlock { (task) -> AnyObject? in
+            
+            let listObjectsOutput = task.result;
+            for object in (listObjectsOutput?.contents)! {
+                
+                print(object.key)
+            }
+            
+            return nil
+        }
+    }
+    
   }
