@@ -13,6 +13,20 @@ extension MKMapView {
         
         setRegion(_region, animated: animated)
     }
+    
+    /**
+     - parameter a: coordinate A.
+     - parameter b: coordinate B.
+     - returns: The distance between the two coordinates.
+     */
+    static func distanceBetweenLocationCoordinates2D(_ a: CLLocationCoordinate2D, b: CLLocationCoordinate2D) -> CLLocationDistance {
+        
+        let locA: CLLocation = CLLocation(latitude: a.latitude, longitude: a.longitude)
+        let locB: CLLocation = CLLocation(latitude: b.latitude, longitude: b.longitude)
+        
+        return locA.distance(from: locB)
+    }
+    
 }
 
 /* Usage
