@@ -10,6 +10,7 @@
 import UIKit
     
 public extension UILabel {
+
         func setStrikethrough(text:String, color:UIColor = UIColor.blackColor()) {
             let attributedText = NSAttributedString(string: text , attributes: [NSStrikethroughStyleAttributeName: NSUnderlineStyle.StyleSingle.rawValue, NSStrikethroughColorAttributeName: color])
             self.attributedText = attributedText
@@ -25,7 +26,15 @@ public extension UILabel {
                 attributeString.addAttribute(NSParagraphStyleAttributeName, value: style, range: NSMakeRange(0, text.characters.count))
                 self.attributedText = attributeString
             }
-        }
+            
+         }
+
+        func set(text _text: String?, duration: TimeInterval) {
+            UIView.transition(with: self, duration: duration, options: .transitionCrossDissolve, animations: { () -> Void in
+                self.text = _text
+            }, completion: nil)
     }
     
-}
+    }
+    
+
