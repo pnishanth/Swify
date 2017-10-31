@@ -26,3 +26,14 @@ let timer = Timer.new(after: 2.seconds) {
     print("Prints this 2 seconds later in main queue")
 }
 timer.start(onRunLoop: RunLoop.current, modes: RunLoopMode.defaultRunLoopMode)
+
+
+//Execution time for a function
+
+let methodStart = Date()
+
+/* ... Do whatever you need to do ... */
+
+let methodFinish = Date()
+let executionTime = methodFinish.timeIntervalSince(methodStart)
+print("Execution time: \(executionTime)")
