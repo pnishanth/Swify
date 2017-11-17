@@ -33,6 +33,11 @@ extension Array {
         }
     }
     
+    
+    func sort() -> [HighScoreEntry] {
+            return sort { $0.score < $1.score }
+        }
+    
     /**
      Will return *true* if array contains object. Object should conform *Equatable* protocol.
      
