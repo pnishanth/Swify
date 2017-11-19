@@ -1,3 +1,11 @@
+//
+//
+//  Int
+//
+//  Created by Nishanth P.
+//  Copyright © 2017 Nishapp. All rights reserved.
+//
+
 import Foundation
 
 public extension Int {
@@ -74,13 +82,12 @@ public extension Int {
             closure()
         }
     }
+    
+    func times (iterator: () -> Void) {
+        for _ in 0..self {
+            iterator()
+        }
 }
-//
-//
-//  Int
-//
-//  Created by Nishanth P.
-//  Copyright © 2017 Nishapp. All rights reserved.
-//
+
 
 
