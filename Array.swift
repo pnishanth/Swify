@@ -33,7 +33,7 @@ extension Array {
         }
     }
     
-    
+    //sort
     func sort() -> [HighScoreEntry] {
             return sort { $0.score < $1.score }
         }
