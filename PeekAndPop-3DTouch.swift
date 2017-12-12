@@ -1,6 +1,6 @@
 //
 //  ViewController.swift
-//  PeekAndPop-3DTouch
+//  PeekAndPop-3DTouch iOS 11ß
 //
 //  Created by Nishanth P on 7/8/17.
 //  Copyright © 2017 Nishapp. All rights reserved.
