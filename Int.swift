@@ -68,6 +68,12 @@ public extension Int {
         return Float(self)
     }
     
+    func times(closure: () -> ()) {
+        for _ in 0 ..< self {
+            closure()
+        }
+    }
+    
     // MARK: Useful
     
     /**
