@@ -8,6 +8,8 @@
 
 // Alamofire upload
 
+//S
+
 Alamofire.upload(
     multipartFormData: { multipartFormData in
         multipartFormData.append(imageData,
