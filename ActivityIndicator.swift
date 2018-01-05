@@ -15,7 +15,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
             showActivityIndicatory()
 
-    }
+    }ss
 
     func showActivityIndicatory(uiView: UIView) {
         var container: UIView = UIView()
