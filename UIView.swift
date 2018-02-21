@@ -116,3 +116,25 @@ public extension UIView {
     }
     
 }
+
+extension UIStackView {
+
+    public convenience init(distribution: UIStackViewDistribution,
+                            alignment: UIStackViewAlignment,
+                            axis: UILayoutConstraintAxis,
+                            spacing: CGFloat = 0) {
+        self.init()
+        self.distribution = distribution
+        self.alignment = alignment
+        self.axis = axis
+        self.spacing = spacing
+    }
+    
+
+    public func addArrangedSubviews(_ views: UIView...) {
+        for view in views {
+            self.addArrangedSubview(view)
+        }
+    }
+    
+}
