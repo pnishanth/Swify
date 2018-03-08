@@ -16,7 +16,7 @@ class AWSSetupController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Setting up in App delegate is preferred.
+        // Init or upload/Download function
         
         let myIdentityPoolId = "POOLID"
         let credentialsProvider:AWSCognitoCredentialsProvider = AWSCognitoCredentialsProvider(regionType:AWSRegionType.USEast1, identityPoolId: myIdentityPoolId)
@@ -51,6 +51,7 @@ class AWSSetupController: UIViewController {
     
     func getObjectInS3(){
         
+    
         let credentialsProvider = AWSStaticCredentialsProvider(accessKey: "ACCESS KEY", secretKey: "SECRET KEY")
         let configuration = AWSServiceConfiguration(region: .USEast1, credentialsProvider: credentialsProvider)
         AWSS3.registerS3WithConfiguration(configuration, forKey: "defaultKey")
