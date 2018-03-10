@@ -11,5 +11,7 @@ alert.addAction(UIAlertAction(title: "cancel", style: UIAlertActionStyle.destruc
 
 // show the alert
 self.present(alert, animated: true, completion: nil)
+    // show the alert
+    self.present(alert, animated: true, completion: nil)
 
 }
