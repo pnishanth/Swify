@@ -6,8 +6,7 @@
 //  Copyright © 2018 Nishapp. All rights reserved.
 //
 
-// Check jenkins1kasklajdasadsjbakjxzxzzxzxcssdsassdsasadshgjdsdsxdsdsdsdsdsd
-
+// Check jenkins1kasklajdasadsjbakjxzxzzxzxcssdsassdsasadshgjdsdsxdsdsdsdsdsds
 import Foundation
 
 extension String {
