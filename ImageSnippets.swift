@@ -20,6 +20,32 @@ albumsPhoto.enumerateObjects({(collection, index, object) in
     
 }
 
+func CreateThumbnailImage(data: NSData, imageSize:Int) -> CGImageRef! {
+    var thumbnailSize: CFNumberRef = 0
+    
+    // Create an image source from NSData; no options.
+    if let imgSource = CGImageSourceCreateWithData(data, nil) {
+        
+        // Set up the thumbnail options.
+        var options = [
+            kCGImageSourceCreateThumbnailWithTransform as NSString : kCFBooleanTrue,
+            kCGImageSourceCreateThumbnailFromImageIfAbsent as NSString : kCFBooleanTrue,
+            kCGImageSourceThumbnailMaxPixelSize as NSString : imageSize
+        ]
+        
+        // Create the thumbnail image using the specified options.
+        if let image = CGImageSourceCreateThumbnailAtIndex(imgSource, 0, options) {
+            return image
+        } else {
+            println("Thumbnail image not created from image source.")
+        }
+    } else {
+        println("Image source is NULL.")
+    }
+    
+    return nil
+}
+
 
 func getAssetThumbnail(asset: PHAsset, size: CGFloat) -> UIImage {
     let retinaScale = UIScreen.main.scale
