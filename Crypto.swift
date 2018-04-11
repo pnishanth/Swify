@@ -11,7 +11,7 @@ guard let baseBytes = testStr.encode(.base64) else {
     return
 }
 
-String(validatingUTF8: baseBytes) == "SGVsbG8sIHdvcmxkIQ=="
+String(validatingUTF8: baseBytes) == "SGVsbG8sIHdvcmxkIQ==="
 
 guard let unBase = baseBytes.decode(.base64) else {
     return
